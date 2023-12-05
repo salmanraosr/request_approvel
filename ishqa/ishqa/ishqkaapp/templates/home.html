@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Records</title>
+
+
+</head>
+<body>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Country</th>
+        <th>state</th>
+        <th>City</th>
+        <th>mobile</th>
+        <th>Aadhar</th>
+    </tr>
+    </thead>
+    <tbody>
+{% for employee in employees %}
+    <tr>
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.address }}</td>
+        <td>{{ employee.country }}</td>
+         <td>{{ employee.state }}</td>
+        <td>{{ employee.city }}</td>
+        <td>{{ employee.mobile }}</td>
+        <td>{{ employee.aadhar }}</td>
+        <td>
+            <a href="/approved/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >approved</span></a>
+            <a href="/delete/{{ employee.id }}">Delete</a>
+        </td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<center><a href="/request" class="btn btn-primary">Add New Record</a></center>
+</body>
+</html>

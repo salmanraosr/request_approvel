@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+</head>
+<body>
+<form method="POST" class="post-form" action="/save">
+        {% csrf_token %}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h3>Update Details</h3>
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Name:</label>
+    <div class="col-sm-4">
+        <input type="text" name="name" id="name" required maxlength="20" value="{{ form.name }}"/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Address:</label>
+    <div class="col-sm-4">
+        <input type="text" name="address" id="address" required maxlength="100" value="{{ form.address }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Country:</label>
+    <div class="col-sm-4">
+        <input type="text" name="country" id="country" required maxlength="254" value="{{ form.country }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">State:</label>
+    <div class="col-sm-4">
+        <input type="text" name="state" id="state" required maxlength="15" value="{{ form.state }}" />
+    </div>
+  </div>
+         <div class="form-group row">
+    <label class="col-sm-2 col-form-label">City:</label>
+    <div class="col-sm-4">
+        <input type="text" name="city" id="city" required maxlength="15" value="{{ form.city }}" />
+    </div>
+  </div>
+         <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Mobile:</label>
+    <div class="col-sm-4">
+        <input type="text" name="mobile" id="mobile" required maxlength="15" value="{{ form.mobile }}" />
+    </div>
+  </div>
+         <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Aadhar:</label>
+    <div class="col-sm-4">
+        <input type="text" name="aadhar" id="aadhar" required maxlength="15" value="{{ form.aadhar }}" />
+    </div>
+  </div>
+          <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Request id:</label>
+    <div class="col-sm-4">
+        <input type="text" name="request" id="request" required maxlength="15" value="{{ form.id }}" />
+    </div>
+  </div>
+          <div class="form-group row">
+    <label class="col-sm-2 col-form-label">approved_at:</label>
+    <div class="col-sm-4">
+        <input type="date" name="approved_at" id="approved_at" required maxlength="15" value="{{ fm.approved_at }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-success">Update</button>
+    </div>
+  </div>
+    </div>
+</form>
+</body>
+</html>
